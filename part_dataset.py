@@ -141,9 +141,16 @@ if __name__ == '__main__':
     sys.path.append('utils')
     import show3d_balls
     show3d_balls.showpoints(ps, ballradius=8)
-   
+    
     d = PartDataset(root = os.path.join(BASE_DIR, 'data/shapenetcore_partanno_segmentation_benchmark_v0'), classification = True)
     print(len(d))
+    #shuffle the classes
+    indices = np.arange(len(d))
+    np.random.shuffle(indices)
     ps, cls = d[0]
     print(ps.shape, type(ps), cls.shape,type(cls))
+    for i in range(len(d)):
+        ps, cls = d[indices[i]]
+        show3d_balls.showpoints(ps, ballradius=8)
+    
 
