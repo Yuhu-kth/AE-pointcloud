@@ -1,0 +1,16 @@
+Namespace(batch_size=32, category='Chair', decay_rate=0.7, decay_step=200000, gpu=0, learning_rate=0.001, log_dir='log_chair_norotation', max_epoch=201, model='model', momentum=0.9, no_rotation=True, num_point=2048, optimizer='adam')
+pid: 106455
+**** EPOCH 000 ****
+2023-02-15 09:59:44.011708
+ -- 010 / 095 --
+mean loss: 4.628481
+mean pc loss: 0.046285
+ -- 020 / 095 --
+mean loss: 2.052981
+mean pc loss: 0.020530
+ -- 030 / 095 --
+mean loss: 1.667873
+mean pc loss: 0.016679
+ -- 040 / 095 --
+mean loss: 1.484945
+mean pc loss: 0.014849
